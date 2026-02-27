@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Español Master! Verb Conjugator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- Main Menu -->
+        <main id="menu-screen" class="screen active">
+            <div class="top-controls">
+                <button id="reset-btn" class="reset-small-btn">Reset</button>
+                <select id="theme-selector" class="theme-select">
+                    <option value="theme-yellow">☀️ Sunny Theme</option>
+                    <option value="theme-pink">🌸 Pastel Pink</option>
+                    <option value="theme-blue">🌌 Deep Blue</option>
+                    <option value="theme-neon">⚡ Neon Dark</option>
+                </select>
+            </div>
+            <header>
+                <h1>¡Español Master!</h1>
+                <p>Select a verb to practice present tense conjugation</p>
+            </header>
+            <div id="level-grid" class="grid-container">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </main>
+
+        <!-- Quiz Screen -->
+        <main id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <button id="back-to-menu-btn" class="icon-btn">⬅</button>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div class="score-display">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" class="star-icon">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                    </svg>
+                    <span id="mistake-counter">Perfect!</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="verb-display">beber</h2>
+                <div class="pronoun-box">
+                    <span id="pronoun-display">yo</span>
+                    <span class="blank">_________</span>
+                </div>
+            </div>
+
+            <div id="options-grid" class="options-container">
+                <!-- Buttons injected by JS -->
+            </div>
+        </main>
+
+        <!-- Result Screen -->
+        <main id="result-screen" class="screen">
+            <div class="result-card">
+                <h2>¡Excelente!</h2>
+                <div id="result-stars" class="stars-container big-stars">
+                    <!-- Stars injected clearly -->
+                </div>
+                <p id="result-message">You completed the level!</p>
+
+                <div class="action-buttons">
+                    <button id="play-again-btn" class="primary-btn">Play Again</button>
+                    <button id="map-btn" class="secondary-btn">Back to Map</button>
+                </div>
+            </div>
+            <!-- Canvas for confetti -->
+            <canvas id="confetti" class="confetti-canvas"></canvas>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
