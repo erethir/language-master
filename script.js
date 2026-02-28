@@ -84,6 +84,15 @@ const verbsData = {
 const STORAGE_KEY = 'espanol_master_progress';
 const THEME_KEY = 'espanol_master_theme';
 
+const achievements = [
+  { threshold: 0, icon: "🥚", title: "Recién Llegado", translation: "Newcomer" },
+  { threshold: 6, icon: "🐣", title: "Aprendiz Curioso", translation: "Curious Learner" },
+  { threshold: 12, icon: "🦅", title: "Viajero Valiente", translation: "Brave Traveler" },
+  { threshold: 18, icon: "🦁", title: "Guerrero de Palabras", translation: "Word Warrior" },
+  { threshold: 24, icon: "🐉", title: "Leyenda Viva", translation: "Living Legend" },
+  { threshold: 30, icon: "👑", title: "Español Master", translation: "Spanish Master" }
+];
+
 // Audio Context Setup (lazy init to bypass auto-play policies)
 let audioCtx;
 function initAudio() {
@@ -133,8 +142,23 @@ function playSound(type) {
 
     osc.start();
     osc.stop(audioCtx.currentTime + 1.2);
+  } else if (type === 'achievement') {
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+    osc.frequency.setValueAtTime(554.37, audioCtx.currentTime + 0.1);
+    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.2);
+    osc.frequency.setValueAtTime(880, audioCtx.currentTime + 0.3);
+    osc.frequency.setValueAtTime(1108.73, audioCtx.currentTime + 0.4);
+
+    gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+    gainNode.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.05);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 1.5);
+
+    osc.start();
+    osc.stop(audioCtx.currentTime + 1.5);
   }
 }
+
 
 // State
 let progress = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
@@ -159,6 +183,11 @@ const progressBar = document.getElementById('progress-bar');
 const mistakeCounter = document.getElementById('mistake-counter');
 const resultStars = document.getElementById('result-stars');
 const resultMessage = document.getElementById('result-message');
+const achievementModal = document.getElementById('achievement-modal');
+const closeModalBtn = document.getElementById('close-modal-btn');
+const modalIcon = document.getElementById('modal-icon');
+const modalTitleEs = document.getElementById('modal-title-es');
+const modalTitleEn = document.getElementById('modal-title-en');
 
 // HTML SVG for Star Icon
 const starSVG = `<svg viewBox="0 0 24 24" class="star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
@@ -186,6 +215,19 @@ function init() {
       renderMenu();
     }
   });
+
+  closeModalBtn.addEventListener('click', () => {
+    achievementModal.classList.add('hide');
+  });
+}
+
+function showAchievementModal(achievement) {
+  modalIcon.innerText = achievement.icon;
+  modalTitleEs.innerText = achievement.title;
+  modalTitleEn.innerText = achievement.translation;
+  achievementModal.classList.remove('hide');
+  playSound('achievement');
+  startConfetti();
 }
 
 function switchScreen(screenName) {
@@ -221,6 +263,28 @@ function renderMenu() {
     `;
     levelGrid.appendChild(card);
   });
+  updateStats();
+}
+
+function updateStats() {
+  const totalStars = Object.values(progress).reduce((a, b) => a + Number(b), 0);
+  const totalStarsEl = document.getElementById('total-stars-count');
+  if (totalStarsEl) {
+    totalStarsEl.innerText = totalStars;
+  }
+
+  let currentAchievement = achievements[0];
+  for (let i = achievements.length - 1; i >= 0; i--) {
+    if (totalStars >= achievements[i].threshold) {
+      currentAchievement = achievements[i];
+      break;
+    }
+  }
+
+  const titleEl = document.getElementById('achievement-title');
+  if (titleEl) {
+    titleEl.innerText = currentAchievement.icon + ' ' + currentAchievement.title;
+  }
 }
 
 // Quiz Logic
@@ -303,7 +367,8 @@ function handleAnswer(selected, correct, buttonElement) {
 // Result Logic
 function finishLevel() {
   progressBar.style.width = '100%';
-  playSound('win');
+
+  const previousTotalStars = Object.values(progress).reduce((a, b) => a + Number(b), 0);
 
   // Calculate stars
   let stars = 0;
@@ -316,10 +381,23 @@ function finishLevel() {
   }
   else if (mistakes <= 2) stars = 1;
 
+  if (stars >= 1) {
+    playSound('win');
+  }
+
   // Save progress if better than previous
   if (!progress[currentVerb] || progress[currentVerb] < stars) {
     progress[currentVerb] = stars;
     saveProgress();
+  }
+
+  const currentTotalStars = Object.values(progress).reduce((a, b) => a + Number(b), 0);
+
+  let newlyUnlockedAchievement = null;
+  for (let i = 0; i < achievements.length; i++) {
+    if (achievements[i].threshold > previousTotalStars && achievements[i].threshold <= currentTotalStars) {
+      newlyUnlockedAchievement = achievements[i];
+    }
   }
 
   // Update Result UI
@@ -344,6 +422,12 @@ function finishLevel() {
   }
 
   switchScreen('result');
+
+  if (newlyUnlockedAchievement) {
+    setTimeout(() => {
+      showAchievementModal(newlyUnlockedAchievement);
+    }, 800);
+  }
 }
 
 // Simple Confetti using Canvas
