@@ -282,8 +282,10 @@ function updateStats() {
   }
 
   const titleEl = document.getElementById('achievement-title');
-  if (titleEl) {
-    titleEl.innerText = currentAchievement.icon + ' ' + currentAchievement.title;
+  const iconEl = document.getElementById('achievement-icon-display');
+  if (titleEl && iconEl) {
+    titleEl.innerText = currentAchievement.title;
+    iconEl.innerText = currentAchievement.icon;
   }
 }
 

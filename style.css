@@ -124,6 +124,7 @@ header h1 {
   font-size: 2.5rem;
   background: linear-gradient(90deg, #4ade80, #3de0f5);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
@@ -200,8 +201,9 @@ header p {
 
 .stats-badge {
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 0.8rem;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   padding: 0.4rem 1rem;
@@ -210,6 +212,12 @@ header p {
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+}
+
+.stats-badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .stats-badge:hover {
@@ -231,6 +239,10 @@ header p {
   font-weight: 600;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
+}
+
+.achievement-icon {
+  font-size: 1.8rem;
 }
 
 .grid-container {
@@ -471,6 +483,7 @@ header p {
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #fbbf24, #f59e0b);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
