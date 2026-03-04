@@ -78,6 +78,30 @@ const verbsData = {
     { pronoun: 'nosotros/as', answer: 'estamos' },
     { pronoun: 'vosotros/as', answer: 'estáis' },
     { pronoun: 'ellos/ellas/ustedes', answer: 'están' }
+  ],
+  querer: [
+    { pronoun: 'yo', answer: 'quiero' },
+    { pronoun: 'tú', answer: 'quieres' },
+    { pronoun: 'él/ella/usted', answer: 'quiere' },
+    { pronoun: 'nosotros/as', answer: 'queremos' },
+    { pronoun: 'vosotros/as', answer: 'queréis' },
+    { pronoun: 'ellos/ellas/ustedes', answer: 'quieren' }
+  ],
+  jugar: [
+    { pronoun: 'yo', answer: 'juego' },
+    { pronoun: 'tú', answer: 'juegas' },
+    { pronoun: 'él/ella/usted', answer: 'juega' },
+    { pronoun: 'nosotros/as', answer: 'jugamos' },
+    { pronoun: 'vosotros/as', answer: 'jugáis' },
+    { pronoun: 'ellos/ellas/ustedes', answer: 'juegan' }
+  ],
+  entrenar: [
+    { pronoun: 'yo', answer: 'entreno' },
+    { pronoun: 'tú', answer: 'entrenas' },
+    { pronoun: 'él/ella/usted', answer: 'entrena' },
+    { pronoun: 'nosotros/as', answer: 'entrenamos' },
+    { pronoun: 'vosotros/as', answer: 'entrenáis' },
+    { pronoun: 'ellos/ellas/ustedes', answer: 'entrenan' }
   ]
 };
 
@@ -86,11 +110,11 @@ const THEME_KEY = 'espanol_master_theme';
 
 const achievements = [
   { threshold: 0, icon: "🥚", title: "Recién Llegado", translation: "Newcomer" },
-  { threshold: 6, icon: "🐣", title: "Aprendiz Curioso", translation: "Curious Learner" },
-  { threshold: 12, icon: "🦅", title: "Viajero Valiente", translation: "Brave Traveler" },
-  { threshold: 18, icon: "🦁", title: "Guerrero de Palabras", translation: "Word Warrior" },
-  { threshold: 24, icon: "🐉", title: "Leyenda Viva", translation: "Living Legend" },
-  { threshold: 30, icon: "👑", title: "Español Master", translation: "Spanish Master" }
+  { threshold: 8, icon: "🐣", title: "Aprendiz Curioso", translation: "Curious Learner" },
+  { threshold: 16, icon: "🦅", title: "Viajero Valiente", translation: "Brave Traveler" },
+  { threshold: 24, icon: "🦁", title: "Guerrero de Palabras", translation: "Word Warrior" },
+  { threshold: 32, icon: "🐉", title: "Leyenda Viva", translation: "Living Legend" },
+  { threshold: 39, icon: "👑", title: "Español Master", translation: "Spanish Master" }
 ];
 
 // Audio Context Setup (lazy init to bypass auto-play policies)
