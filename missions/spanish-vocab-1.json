@@ -1,0 +1,44 @@
+{
+  "id": "spanish-vocab-1",
+  "title": "Spanish Vocabulary Practice",
+  "description": "Learn basic Spanish words",
+  "icon": "🥑",
+  "achievements": [
+    { "threshold": 0, "icon": "🌱", "title": "Semilla", "translation": "Seed" },
+    { "threshold": 3, "icon": "🌿", "title": "Brote", "translation": "Sprout" },
+    { "threshold": 6, "icon": "🌳", "title": "Árbol", "translation": "Tree" },
+    { "threshold": 9, "icon": "🍎", "title": "Cosecha", "translation": "Harvest" }
+  ],
+  "topics": [
+    {
+      "id": "animals",
+      "title": "Animals",
+      "questions": [
+        { "prompt": "Dog", "answer": "el perro", "type": "free_text" },
+        { "prompt": "Cat", "answer": "el gato", "type": "free_text" },
+        { "prompt": "Bird", "answer": "el pájaro", "type": "multiple_choice", "options": ["el pájaro", "el pez", "el ratón", "el oso"] },
+        { "prompt": "Fish", "answer": "el pez", "type": "free_text" }
+      ]
+    },
+    {
+      "id": "colors",
+      "title": "Colors",
+      "questions": [
+        { "prompt": "Red", "answer": "rojo", "type": "multiple_choice", "options": ["rojo", "azul", "verde", "amarillo"] },
+        { "prompt": "Blue", "answer": "azul", "type": "multiple_choice", "options": ["rojo", "azul", "verde", "amarillo"] },
+        { "prompt": "Green", "answer": "verde", "type": "free_text" },
+        { "prompt": "Yellow", "answer": "amarillo", "type": "free_text" }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food",
+      "questions": [
+        { "prompt": "Apple", "answer": "la manzana", "type": "free_text" },
+        { "prompt": "Bread", "answer": "el pan", "type": "multiple_choice", "options": ["el pan", "la leche", "el queso", "la carne"] },
+        { "prompt": "Milk", "answer": "la leche", "type": "free_text" },
+        { "prompt": "Cheese", "answer": "el queso", "type": "free_text" }
+      ]
+    }
+  ]
+}

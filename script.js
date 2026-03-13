@@ -1,120 +1,13 @@
-const verbsData = {
-  beber: [
-    { pronoun: 'yo', answer: 'bebo' },
-    { pronoun: 'tú', answer: 'bebes' },
-    { pronoun: 'él/ella/usted', answer: 'bebe' },
-    { pronoun: 'nosotros/as', answer: 'bebemos' },
-    { pronoun: 'vosotros/as', answer: 'bebéis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'beben' }
-  ],
-  vivir: [
-    { pronoun: 'yo', answer: 'vivo' },
-    { pronoun: 'tú', answer: 'vives' },
-    { pronoun: 'él/ella/usted', answer: 'vive' },
-    { pronoun: 'nosotros/as', answer: 'vivimos' },
-    { pronoun: 'vosotros/as', answer: 'vivís' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'viven' }
-  ],
-  estudiar: [
-    { pronoun: 'yo', answer: 'estudio' },
-    { pronoun: 'tú', answer: 'estudias' },
-    { pronoun: 'él/ella/usted', answer: 'estudia' },
-    { pronoun: 'nosotros/as', answer: 'estudiamos' },
-    { pronoun: 'vosotros/as', answer: 'estudiáis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'estudian' }
-  ],
-  aprender: [
-    { pronoun: 'yo', answer: 'aprendo' },
-    { pronoun: 'tú', answer: 'aprendes' },
-    { pronoun: 'él/ella/usted', answer: 'aprende' },
-    { pronoun: 'nosotros/as', answer: 'aprendemos' },
-    { pronoun: 'vosotros/as', answer: 'aprendéis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'aprenden' }
-  ],
-  escribir: [
-    { pronoun: 'yo', answer: 'escribo' },
-    { pronoun: 'tú', answer: 'escribes' },
-    { pronoun: 'él/ella/usted', answer: 'escribe' },
-    { pronoun: 'nosotros/as', answer: 'escribimos' },
-    { pronoun: 'vosotros/as', answer: 'escribís' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'escriben' }
-  ],
-  trabajar: [
-    { pronoun: 'yo', answer: 'trabajo' },
-    { pronoun: 'tú', answer: 'trabajas' },
-    { pronoun: 'él/ella/usted', answer: 'trabaja' },
-    { pronoun: 'nosotros/as', answer: 'trabajamos' },
-    { pronoun: 'vosotros/as', answer: 'trabajáis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'trabajan' }
-  ],
-  abrir: [
-    { pronoun: 'yo', answer: 'abro' },
-    { pronoun: 'tú', answer: 'abres' },
-    { pronoun: 'él/ella/usted', answer: 'abre' },
-    { pronoun: 'nosotros/as', answer: 'abrimos' },
-    { pronoun: 'vosotros/as', answer: 'abrís' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'abren' }
-  ],
-  tener: [
-    { pronoun: 'yo', answer: 'tengo' },
-    { pronoun: 'tú', answer: 'tienes' },
-    { pronoun: 'él/ella/usted', answer: 'tiene' },
-    { pronoun: 'nosotros/as', answer: 'tenemos' },
-    { pronoun: 'vosotros/as', answer: 'tenéis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'tienen' }
-  ],
-  ser: [
-    { pronoun: 'yo', answer: 'soy' },
-    { pronoun: 'tú', answer: 'eres' },
-    { pronoun: 'él/ella/usted', answer: 'es' },
-    { pronoun: 'nosotros/as', answer: 'somos' },
-    { pronoun: 'vosotros/as', answer: 'sois' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'son' }
-  ],
-  estar: [
-    { pronoun: 'yo', answer: 'estoy' },
-    { pronoun: 'tú', answer: 'estás' },
-    { pronoun: 'él/ella/usted', answer: 'está' },
-    { pronoun: 'nosotros/as', answer: 'estamos' },
-    { pronoun: 'vosotros/as', answer: 'estáis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'están' }
-  ],
-  querer: [
-    { pronoun: 'yo', answer: 'quiero' },
-    { pronoun: 'tú', answer: 'quieres' },
-    { pronoun: 'él/ella/usted', answer: 'quiere' },
-    { pronoun: 'nosotros/as', answer: 'queremos' },
-    { pronoun: 'vosotros/as', answer: 'queréis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'quieren' }
-  ],
-  jugar: [
-    { pronoun: 'yo', answer: 'juego' },
-    { pronoun: 'tú', answer: 'juegas' },
-    { pronoun: 'él/ella/usted', answer: 'juega' },
-    { pronoun: 'nosotros/as', answer: 'jugamos' },
-    { pronoun: 'vosotros/as', answer: 'jugáis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'juegan' }
-  ],
-  entrenar: [
-    { pronoun: 'yo', answer: 'entreno' },
-    { pronoun: 'tú', answer: 'entrenas' },
-    { pronoun: 'él/ella/usted', answer: 'entrena' },
-    { pronoun: 'nosotros/as', answer: 'entrenamos' },
-    { pronoun: 'vosotros/as', answer: 'entrenáis' },
-    { pronoun: 'ellos/ellas/ustedes', answer: 'entrenan' }
-  ]
-};
+const STORAGE_KEY = 'study_master_progress';
+const THEME_KEY = 'study_master_theme';
 
-const STORAGE_KEY = 'espanol_master_progress';
-const THEME_KEY = 'espanol_master_theme';
-
-const achievements = [
+const defaultAchievements = [
   { threshold: 0, icon: "🥚", title: "Recién Llegado", translation: "Newcomer" },
   { threshold: 8, icon: "🐣", title: "Aprendiz Curioso", translation: "Curious Learner" },
   { threshold: 16, icon: "🦅", title: "Viajero Valiente", translation: "Brave Traveler" },
   { threshold: 24, icon: "🦁", title: "Guerrero de Palabras", translation: "Word Warrior" },
   { threshold: 32, icon: "🐉", title: "Leyenda Viva", translation: "Living Legend" },
-  { threshold: 39, icon: "👑", title: "Español Master", translation: "Spanish Master" }
+  { threshold: 39, icon: "👑", title: "Study Master", translation: "Master" }
 ];
 
 // Audio Context Setup (lazy init to bypass auto-play policies)
@@ -183,10 +76,11 @@ function playSound(type) {
   }
 }
 
-
 // State
 let progress = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-let currentVerb = null;
+let missions = [];
+let currentMission = null;
+let currentTopic = null;
 let currentQuestionIndex = 0;
 let questions = [];
 let mistakes = 0;
@@ -194,15 +88,21 @@ let questionLocked = false;
 
 // DOM Elements
 const screens = {
+  missions: document.getElementById('missions-screen'),
   menu: document.getElementById('menu-screen'),
   quiz: document.getElementById('quiz-screen'),
   result: document.getElementById('result-screen')
 };
 
+const missionsGrid = document.getElementById('missions-grid');
 const levelGrid = document.getElementById('level-grid');
 const verbDisplay = document.getElementById('verb-display');
 const pronounDisplay = document.getElementById('pronoun-display');
+const blankDisplay = document.getElementById('blank-display');
 const optionsGrid = document.getElementById('options-grid');
+const freeTextContainer = document.getElementById('free-text-container');
+const freeTextInput = document.getElementById('free-text-input');
+const freeTextSubmit = document.getElementById('free-text-submit');
 const progressBar = document.getElementById('progress-bar');
 const mistakeCounter = document.getElementById('mistake-counter');
 const resultStars = document.getElementById('result-stars');
@@ -217,7 +117,7 @@ const modalTitleEn = document.getElementById('modal-title-en');
 const starSVG = `<svg viewBox="0 0 24 24" class="star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
 
 // Initialize App
-function init() {
+async function init() {
   const savedTheme = localStorage.getItem(THEME_KEY) || 'theme-neon';
   document.documentElement.className = savedTheme;
   document.getElementById('theme-selector').value = savedTheme;
@@ -227,21 +127,40 @@ function init() {
     localStorage.setItem(THEME_KEY, e.target.value);
   });
 
-  renderMenu();
+  try {
+    const res = await fetch('missions.json');
+    const missionFiles = await res.json();
+    for (const file of missionFiles) {
+      const mRes = await fetch(file);
+      const mData = await mRes.json();
+      missions.push(mData);
+    }
+  } catch (e) {
+    console.error('Failed to load missions', e);
+  }
 
+  renderMissions();
+
+  document.getElementById('back-to-missions-btn').addEventListener('click', () => switchScreen('missions'));
   document.getElementById('back-to-menu-btn').addEventListener('click', () => switchScreen('menu'));
-  document.getElementById('play-again-btn').addEventListener('click', () => startLevel(currentVerb));
+  document.getElementById('play-again-btn').addEventListener('click', () => startLevel(currentTopic));
   document.getElementById('map-btn').addEventListener('click', () => switchScreen('menu'));
+  
   document.getElementById('reset-btn').addEventListener('click', () => {
     if (confirm('Are you sure you want to reset all your progress?')) {
       progress = {};
       saveProgress();
-      renderMenu();
+      renderMissions();
     }
   });
 
   closeModalBtn.addEventListener('click', () => {
     achievementModal.classList.add('hide');
+  });
+
+  freeTextSubmit.addEventListener('click', () => handleFreeTextSubmit());
+  freeTextInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleFreeTextSubmit();
   });
 }
 
@@ -257,28 +176,67 @@ function showAchievementModal(achievement) {
 function switchScreen(screenName) {
   Object.values(screens).forEach(screen => screen.classList.remove('active'));
   screens[screenName].classList.add('active');
-  if (screenName === 'menu') renderMenu();
+  if (screenName === 'missions') renderMissions();
+  if (screenName === 'menu' && currentMission) renderTopics();
 }
 
 function saveProgress() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 }
 
-// Menu Logic
-function renderMenu() {
+// Missions Menu Logic
+function renderMissions() {
+  missionsGrid.innerHTML = '';
+  missions.forEach(mission => {
+    // calculate total stars earned in this mission
+    if (!progress[mission.id]) progress[mission.id] = {};
+    const missionStars = Object.values(progress[mission.id]).reduce((a, b) => a + Number(b), 0);
+    const maxStars = mission.topics.length * 3;
+    
+    const card = document.createElement('div');
+    card.className = 'verb-card';
+    card.onclick = () => {
+      initAudio();
+      openMission(mission);
+    };
+
+    card.innerHTML = `
+      <div style="font-size: 3rem; margin-bottom: 0.5rem">${mission.icon || '🎯'}</div>
+      <h3>${mission.title}</h3>
+      <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">${mission.description}</p>
+      <div class="stars-count" style="font-size: 1rem;">🌟 ${missionStars} / ${maxStars}</div>
+    `;
+    missionsGrid.appendChild(card);
+  });
+}
+
+function openMission(mission) {
+  currentMission = mission;
+  renderTopics();
+  switchScreen('menu');
+}
+
+// Topics Logic
+function renderTopics() {
+  document.getElementById('mission-title-display').innerText = currentMission.title;
+  document.getElementById('mission-desc-display').innerText = currentMission.description || "Complete topics to earn stars!";
+
   levelGrid.innerHTML = '';
-  Object.keys(verbsData).forEach(verb => {
-    const starsEarned = progress[verb] || 0;
+  
+  const currentMissionProgress = progress[currentMission.id];
+
+  currentMission.topics.forEach(topic => {
+    const starsEarned = currentMissionProgress[topic.id] || 0;
 
     const card = document.createElement('div');
     card.className = 'verb-card';
     card.onclick = () => {
       initAudio(); // Required to bypass user-interaction rule for audio
-      startLevel(verb);
+      startLevel(topic);
     };
 
     card.innerHTML = `
-      <h3>${verb}</h3>
+      <h3>${topic.title}</h3>
       <div class="stars">
         ${starSVG.replace('class="star"', `class="star ${starsEarned >= 1 ? 'active' : ''}"`)}
         ${starSVG.replace('class="star"', `class="star ${starsEarned >= 2 ? 'active' : ''}"`)}
@@ -291,16 +249,19 @@ function renderMenu() {
 }
 
 function updateStats() {
-  const totalStars = Object.values(progress).reduce((a, b) => a + Number(b), 0);
-  const totalStarsEl = document.getElementById('total-stars-count');
-  if (totalStarsEl) {
-    totalStarsEl.innerText = totalStars;
-  }
+  const currentMissionProgress = progress[currentMission.id] || {};
+  const totalStars = Object.values(currentMissionProgress).reduce((a, b) => a + Number(b), 0);
+  const maxStars = currentMission.topics.length * 3;
+  
+  document.getElementById('total-stars-count').innerText = totalStars;
+  document.getElementById('max-stars-count').innerText = maxStars;
 
-  let currentAchievement = achievements[0];
-  for (let i = achievements.length - 1; i >= 0; i--) {
-    if (totalStars >= achievements[i].threshold) {
-      currentAchievement = achievements[i];
+  const missionAchievements = currentMission.achievements || defaultAchievements;
+  
+  let currentAchievement = missionAchievements[0];
+  for (let i = missionAchievements.length - 1; i >= 0; i--) {
+    if (totalStars >= missionAchievements[i].threshold) {
+      currentAchievement = missionAchievements[i];
       break;
     }
   }
@@ -314,13 +275,13 @@ function updateStats() {
 }
 
 // Quiz Logic
-function startLevel(verb) {
-  currentVerb = verb;
+function startLevel(topic) {
+  currentTopic = topic;
   currentQuestionIndex = 0;
   mistakes = 0;
 
   // Clone and shuffle questions
-  questions = [...verbsData[verb]].sort(() => Math.random() - 0.5);
+  questions = [...topic.questions].sort(() => Math.random() - 0.5);
 
   switchScreen('quiz');
   updateMistakeDisplay();
@@ -336,39 +297,77 @@ function loadQuestion() {
   questionLocked = false;
   const q = questions[currentQuestionIndex];
 
-  // Update UI
-  verbDisplay.innerText = currentVerb;
-  pronounDisplay.innerText = q.pronoun.charAt(0).toUpperCase() + q.pronoun.slice(1);
+  // Update UI Defaults
+  verbDisplay.innerText = currentTopic.title;
+  pronounDisplay.innerText = q.prompt;
+  blankDisplay.innerText = '_________';
+  blankDisplay.className = 'blank';
   progressBar.style.width = `${(currentQuestionIndex / questions.length) * 100}%`;
 
-  // Generate options
   optionsGrid.innerHTML = '';
-  const options = generateOptions(q.answer, currentVerb);
-  options.forEach(opt => {
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.innerText = opt;
-    btn.onclick = () => handleAnswer(opt, q.answer, btn);
-    optionsGrid.appendChild(btn);
-  });
+  
+  if (q.type === 'free_text') {
+    optionsGrid.classList.add('hide');
+    freeTextContainer.classList.remove('hide');
+    freeTextInput.value = '';
+    freeTextInput.disabled = false;
+    freeTextSubmit.disabled = false;
+    freeTextInput.classList.remove('wrong', 'correct');
+    setTimeout(() => freeTextInput.focus(), 50);
+  } else {
+    optionsGrid.classList.remove('hide');
+    freeTextContainer.classList.add('hide');
+
+    const options = generateOptions(q);
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.innerText = opt;
+      btn.onclick = () => handleAnswer(opt.trim().toLowerCase(), q.answer.trim().toLowerCase(), btn);
+      optionsGrid.appendChild(btn);
+    });
+  }
 }
 
-function generateOptions(correctAnswer, verb) {
-  const allAnswers = verbsData[verb].map(v => v.answer);
-  const distractors = allAnswers.filter(a => a !== correctAnswer)
+function generateOptions(q) {
+  if (q.options && q.options.length > 0) {
+    return [...q.options].sort(() => Math.random() - 0.5);
+  }
+  
+  // Fallback if no specific options are provided, use other answers from topic
+  const allAnswers = currentTopic.questions.map(v => v.answer);
+  const distractors = allAnswers.filter(a => a !== q.answer)
     .sort(() => Math.random() - 0.5)
     .slice(0, 3);
 
-  return [correctAnswer, ...distractors].sort(() => Math.random() - 0.5);
+  // Pad with random words if needed
+  while(distractors.length < 3) distractors.push("...")
+
+  return [q.answer, ...distractors].sort(() => Math.random() - 0.5);
 }
 
-function handleAnswer(selected, correct, buttonElement) {
+function handleFreeTextSubmit() {
+  if (questionLocked) return;
+  const q = questions[currentQuestionIndex];
+  const inputVal = freeTextInput.value.trim().toLowerCase();
+  if(!inputVal) return;
+  
+  handleAnswer(inputVal, q.answer.trim().toLowerCase(), freeTextInput, true);
+}
+
+function handleAnswer(selected, correct, element, isFreeText = false) {
   if (questionLocked) return;
 
   if (selected === correct) {
     questionLocked = true;
     playSound('correct');
-    buttonElement.classList.add('correct');
+    element.classList.add('correct');
+    if (isFreeText) {
+      freeTextInput.blur();
+      blankDisplay.innerText = correct;
+      blankDisplay.className = 'correct';
+      blankDisplay.style.color = 'var(--primary)';
+    }
 
     setTimeout(() => {
       currentQuestionIndex++;
@@ -380,12 +379,15 @@ function handleAnswer(selected, correct, buttonElement) {
     }, 800);
   } else {
     playSound('wrong');
-    buttonElement.classList.add('wrong');
+    element.classList.add('wrong');
     mistakes++;
     updateMistakeDisplay();
-    // Allow clicking again after animation
+    // Allow trying again after animation
     setTimeout(() => {
-      buttonElement.classList.remove('wrong');
+      element.classList.remove('wrong');
+      if(isFreeText) {
+          freeTextInput.focus();
+      }
     }, 500);
   }
 }
@@ -394,12 +396,13 @@ function handleAnswer(selected, correct, buttonElement) {
 function finishLevel() {
   progressBar.style.width = '100%';
 
-  const previousTotalStars = Object.values(progress).reduce((a, b) => a + Number(b), 0);
+  const currentMissionProgress = progress[currentMission.id] || {};
+  const previousTotalStars = Object.values(currentMissionProgress).reduce((a, b) => a + Number(b), 0);
 
   // Calculate stars
   let stars = 0;
   if (mistakes === 0) {
-    if (progress[currentVerb] >= 2) {
+    if (currentMissionProgress[currentTopic.id] >= 2) {
       stars = 3; // Second perfect run
     } else {
       stars = 2; // First perfect run
@@ -412,17 +415,19 @@ function finishLevel() {
   }
 
   // Save progress if better than previous
-  if (!progress[currentVerb] || progress[currentVerb] < stars) {
-    progress[currentVerb] = stars;
+  if (!currentMissionProgress[currentTopic.id] || currentMissionProgress[currentTopic.id] < stars) {
+    currentMissionProgress[currentTopic.id] = stars;
+    progress[currentMission.id] = currentMissionProgress;
     saveProgress();
   }
 
-  const currentTotalStars = Object.values(progress).reduce((a, b) => a + Number(b), 0);
+  const currentTotalStars = Object.values(currentMissionProgress).reduce((a, b) => a + Number(b), 0);
+  const missionAchievements = currentMission.achievements || defaultAchievements;
 
   let newlyUnlockedAchievement = null;
-  for (let i = 0; i < achievements.length; i++) {
-    if (achievements[i].threshold > previousTotalStars && achievements[i].threshold <= currentTotalStars) {
-      newlyUnlockedAchievement = achievements[i];
+  for (let i = 0; i < missionAchievements.length; i++) {
+    if (missionAchievements[i].threshold > previousTotalStars && missionAchievements[i].threshold <= currentTotalStars) {
+      newlyUnlockedAchievement = missionAchievements[i];
     }
   }
 

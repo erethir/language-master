@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Español Master! Verb Conjugator</title>
+    <title>Study Master</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,8 +12,8 @@
 <body>
 
     <div id="app">
-        <!-- Main Menu -->
-        <main id="menu-screen" class="screen active">
+        <!-- Missions Screen -->
+        <main id="missions-screen" class="screen active">
             <div class="top-controls">
                 <div class="left-controls">
                     <select id="theme-selector" class="theme-select">
@@ -24,17 +24,33 @@
                     </select>
                     <button id="reset-btn" class="reset-small-btn">Reset</button>
                 </div>
+            </div>
+            <header>
+                <h1>Study Master</h1>
+                <p>Select a mission to begin learning!</p>
+            </header>
+            <div id="missions-grid" class="grid-container">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </main>
+
+        <!-- Topics Screen -->
+        <main id="menu-screen" class="screen">
+            <div class="quiz-header" style="margin-bottom: 0;">
+                <button id="back-to-missions-btn" class="icon-btn">⬅</button>
+                <div style="flex: 1;"></div>
                 <div class="stats-badge" id="stats-badge">
                     <div class="stats-badge-text">
-                        <div class="stars-count">🌟 <span id="total-stars-count">0</span> / 30</div>
+                        <div class="stars-count">🌟 <span id="total-stars-count">0</span> / <span
+                                id="max-stars-count">30</span></div>
                         <div class="achievement-title" id="achievement-title">Recién Llegado</div>
                     </div>
                     <div class="achievement-icon" id="achievement-icon-display">🥚</div>
                 </div>
             </div>
-            <header>
-                <h1>¡Español Master!</h1>
-                <p>Select a verb to practice present tense conjugation</p>
+            <header style="margin-top: 1rem;">
+                <h1 id="mission-title-display">¡Español Master!</h1>
+                <p id="mission-desc-display">Select a verb to practice present tense conjugation</p>
             </header>
             <div id="level-grid" class="grid-container">
                 <!-- Dynamically populated by JS -->
@@ -63,12 +79,18 @@
                 <h2 id="verb-display">beber</h2>
                 <div class="pronoun-box">
                     <span id="pronoun-display">yo</span>
-                    <span class="blank">_________</span>
+                    <span class="blank" id="blank-display">_________</span>
                 </div>
             </div>
 
             <div id="options-grid" class="options-container">
                 <!-- Buttons injected by JS -->
+            </div>
+
+            <div id="free-text-container" class="free-text-container hide">
+                <input type="text" id="free-text-input" class="free-text-input" placeholder="Type your answer here..."
+                    autocomplete="off">
+                <button id="free-text-submit" class="primary-btn submit-btn">Submit</button>
             </div>
         </main>
 
@@ -83,7 +105,7 @@
 
                 <div class="action-buttons">
                     <button id="play-again-btn" class="primary-btn">Play Again</button>
-                    <button id="map-btn" class="secondary-btn">Back to Map</button>
+                    <button id="map-btn" class="secondary-btn">Back to Topics</button>
                 </div>
             </div>
             <!-- Canvas for confetti -->
@@ -101,6 +123,8 @@
                 <p id="modal-title-en" class="modal-title-en">Spanish Master</p>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
     <script src="script.js"></script>

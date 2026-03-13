@@ -1,0 +1,172 @@
+{
+  "id": "spanish-verbs-1",
+  "title": "Spanish Verb Practice 1",
+  "description": "Practice present tense conjugation",
+  "icon": "🇪🇸",
+  "achievements": [
+    { "threshold": 0, "icon": "🥚", "title": "Recién Llegado", "translation": "Newcomer" },
+    { "threshold": 8, "icon": "🐣", "title": "Aprendiz Curioso", "translation": "Curious Learner" },
+    { "threshold": 16, "icon": "🦅", "title": "Viajero Valiente", "translation": "Brave Traveler" },
+    { "threshold": 24, "icon": "🦁", "title": "Guerrero de Palabras", "translation": "Word Warrior" },
+    { "threshold": 32, "icon": "🐉", "title": "Leyenda Viva", "translation": "Living Legend" },
+    { "threshold": 39, "icon": "👑", "title": "Español Master", "translation": "Spanish Master" }
+  ],
+  "topics": [
+    {
+      "id": "beber",
+      "title": "beber",
+      "questions": [
+        { "prompt": "yo", "answer": "bebo", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "bebes", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "bebe", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "bebemos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "bebéis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "beben", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "vivir",
+      "title": "vivir",
+      "questions": [
+        { "prompt": "yo", "answer": "vivo", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "vives", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "vive", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "vivimos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "vivís", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "viven", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "estudiar",
+      "title": "estudiar",
+      "questions": [
+        { "prompt": "yo", "answer": "estudio", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "estudias", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "estudia", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "estudiamos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "estudiáis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "estudian", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "aprender",
+      "title": "aprender",
+      "questions": [
+        { "prompt": "yo", "answer": "aprendo", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "aprendes", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "aprende", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "aprendemos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "aprendéis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "aprenden", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "escribir",
+      "title": "escribir",
+      "questions": [
+        { "prompt": "yo", "answer": "escribo", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "escribes", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "escribe", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "escribimos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "escribís", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "escriben", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "trabajar",
+      "title": "trabajar",
+      "questions": [
+        { "prompt": "yo", "answer": "trabajo", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "trabajas", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "trabaja", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "trabajamos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "trabajáis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "trabajan", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "abrir",
+      "title": "abrir",
+      "questions": [
+        { "prompt": "yo", "answer": "abro", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "abres", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "abre", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "abrimos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "abrís", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "abren", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "tener",
+      "title": "tener",
+      "questions": [
+        { "prompt": "yo", "answer": "tengo", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "tienes", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "tiene", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "tenemos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "tenéis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "tienen", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "ser",
+      "title": "ser",
+      "questions": [
+        { "prompt": "yo", "answer": "soy", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "eres", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "es", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "somos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "sois", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "son", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "estar",
+      "title": "estar",
+      "questions": [
+        { "prompt": "yo", "answer": "estoy", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "estás", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "está", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "estamos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "estáis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "están", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "querer",
+      "title": "querer",
+      "questions": [
+        { "prompt": "yo", "answer": "quiero", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "quieres", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "quiere", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "queremos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "queréis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "quieren", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "jugar",
+      "title": "jugar",
+      "questions": [
+        { "prompt": "yo", "answer": "juego", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "juegas", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "juega", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "jugamos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "jugáis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "juegan", "type": "multiple_choice" }
+      ]
+    },
+    {
+      "id": "entrenar",
+      "title": "entrenar",
+      "questions": [
+        { "prompt": "yo", "answer": "entreno", "type": "multiple_choice" },
+        { "prompt": "tú", "answer": "entrenas", "type": "multiple_choice" },
+        { "prompt": "él/ella/usted", "answer": "entrena", "type": "multiple_choice" },
+        { "prompt": "nosotros/as", "answer": "entrenamos", "type": "multiple_choice" },
+        { "prompt": "vosotros/as", "answer": "entrenáis", "type": "multiple_choice" },
+        { "prompt": "ellos/ellas/ustedes", "answer": "entrenan", "type": "multiple_choice" }
+      ]
+    }
+  ]
+}
