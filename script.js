@@ -228,16 +228,26 @@ function renderTopics() {
   currentMission.topics.forEach(topic => {
     const starsEarned = currentMissionProgress[topic.id] || 0;
 
+    let isLocked = false;
+    if (topic.requires) {
+      const requiredStars = currentMissionProgress[topic.requires] || 0;
+      if (requiredStars < 2) {
+        isLocked = true;
+      }
+    }
+
     const card = document.createElement('div');
-    card.className = 'verb-card';
+    card.className = `verb-card ${isLocked ? 'locked' : ''}`;
     card.onclick = () => {
+      if (isLocked) return;
       initAudio(); // Required to bypass user-interaction rule for audio
       startLevel(topic);
     };
 
     card.innerHTML = `
       <h3>${topic.title}</h3>
-      <div class="stars">
+      ${isLocked ? '<div class="locked-message">🔒 Få 2 stjärnor på föregående först</div>' : ''}
+      <div class="stars" ${isLocked ? 'style="opacity: 0.5"' : ''}>
         ${starSVG.replace('class="star"', `class="star ${starsEarned >= 1 ? 'active' : ''}"`)}
         ${starSVG.replace('class="star"', `class="star ${starsEarned >= 2 ? 'active' : ''}"`)}
         ${starSVG.replace('class="star"', `class="star ${starsEarned >= 3 ? 'active' : ''}"`)}
@@ -310,6 +320,7 @@ function loadQuestion() {
     optionsGrid.classList.add('hide');
     freeTextContainer.classList.remove('hide');
     freeTextInput.value = '';
+    freeTextInput.placeholder = '';
     freeTextInput.disabled = false;
     freeTextSubmit.disabled = false;
     freeTextInput.classList.remove('wrong', 'correct');
@@ -382,6 +393,12 @@ function handleAnswer(selected, correct, element, isFreeText = false) {
     element.classList.add('wrong');
     mistakes++;
     updateMistakeDisplay();
+
+    if (isFreeText) {
+      freeTextInput.value = '';
+      freeTextInput.placeholder = correct;
+    }
+
     // Allow trying again after animation
     setTimeout(() => {
       element.classList.remove('wrong');

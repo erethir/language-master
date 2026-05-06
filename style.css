@@ -285,6 +285,25 @@ header p {
   box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
 }
 
+.verb-card.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(80%);
+}
+
+.verb-card.locked:hover {
+  transform: none;
+  border-color: var(--card-border);
+  box-shadow: none;
+}
+
+.locked-message {
+  font-size: 0.8rem;
+  color: var(--star);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
 .verb-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;

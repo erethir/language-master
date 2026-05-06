@@ -1,0 +1,777 @@
+{
+  "id": "spanish-prov-2-vt26",
+  "title": "Spanska Prov 2 (Åk 7)",
+  "description": "Öva inför prov 2: Glosor, verb i presens, ser/estar, adjektiv och futurum!",
+  "icon": "📝",
+  "achievements": [
+    {
+      "threshold": 0,
+      "icon": "📖",
+      "title": "Nybörjare",
+      "translation": "Beginner"
+    },
+    {
+      "threshold": 6,
+      "icon": "🧠",
+      "title": "Tänkare",
+      "translation": "Thinker"
+    },
+    {
+      "threshold": 12,
+      "icon": "🔥",
+      "title": "I Elden",
+      "translation": "On Fire"
+    },
+    {
+      "threshold": 18,
+      "icon": "🎓",
+      "title": "Redo för provet",
+      "translation": "Ready for Exam"
+    }
+  ],
+  "topics": [
+    {
+      "id": "glosor-fraser",
+      "title": "Glosor & Fraser",
+      "questions": [
+        {
+          "prompt": "Det var mycket länge sedan",
+          "answer": "hace mucho tiempo",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "Han är mycket trevlig",
+          "answer": "es muy simpático",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "Vi är på semester",
+          "answer": "estamos de vacaciones",
+          "type": "multiple_choice",
+          "options": [
+            "estamos de vacaciones",
+            "estoy de vacaciones",
+            "somos de vacaciones"
+          ]
+        },
+        {
+          "prompt": "Hur är läget?",
+          "answer": "¿qué tal?",
+          "type": "multiple_choice",
+          "options": [
+            "¿qué tal?",
+            "¿cómo te llamas?",
+            "¿cuántos años tienes?"
+          ]
+        },
+        {
+          "prompt": "Hur mår du?",
+          "answer": "¿cómo estás?",
+          "type": "multiple_choice",
+          "options": [
+            "¿cómo estás?",
+            "¿qué tal?",
+            "¿cómo eres?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glosor-fraser-freetext",
+      "title": "Glosor & Fraser (Fritext)",
+      "questions": [
+        {
+          "prompt": "Det var mycket länge sedan",
+          "answer": "hace mucho tiempo",
+          "type": "free_text"
+        },
+        {
+          "prompt": "Han är mycket trevlig",
+          "answer": "es muy simpático",
+          "type": "free_text"
+        },
+        {
+          "prompt": "Vi är på semester",
+          "answer": "estamos de vacaciones",
+          "type": "free_text",
+          "options": [
+            "estamos de vacaciones",
+            "estoy de vacaciones",
+            "somos de vacaciones"
+          ]
+        },
+        {
+          "prompt": "Hur är läget?",
+          "answer": "¿qué tal?",
+          "type": "free_text",
+          "options": [
+            "¿qué tal?",
+            "¿cómo te llamas?",
+            "¿cuántos años tienes?"
+          ]
+        },
+        {
+          "prompt": "Hur mår du?",
+          "answer": "¿cómo estás?",
+          "type": "free_text",
+          "options": [
+            "¿cómo estás?",
+            "¿qué tal?",
+            "¿cómo eres?"
+          ]
+        }
+      ],
+      "requires": "glosor-fraser"
+    },
+    {
+      "id": "verb-presens",
+      "title": "Verb: Presens",
+      "questions": [
+        {
+          "prompt": "yo (hablar)",
+          "answer": "hablo",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "tú (bailar)",
+          "answer": "bailas",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "él (nadar)",
+          "answer": "nada",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "nosotros (practicar)",
+          "answer": "practicamos",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "vosotros (trabajar)",
+          "answer": "trabajáis",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "ellos (terminar)",
+          "answer": "terminan",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "Mis amigos (tomar)",
+          "answer": "toman",
+          "type": "multiple_choice",
+          "options": [
+            "toman",
+            "tomamos",
+            "toma",
+            "toman"
+          ]
+        },
+        {
+          "prompt": "Yo (entrenar)",
+          "answer": "entreno",
+          "type": "multiple_choice"
+        }
+      ]
+    },
+    {
+      "id": "verb-presens-freetext",
+      "title": "Verb: Presens (Fritext)",
+      "questions": [
+        {
+          "prompt": "yo (hablar)",
+          "answer": "hablo",
+          "type": "free_text"
+        },
+        {
+          "prompt": "tú (bailar)",
+          "answer": "bailas",
+          "type": "free_text"
+        },
+        {
+          "prompt": "él (nadar)",
+          "answer": "nada",
+          "type": "free_text"
+        },
+        {
+          "prompt": "nosotros (practicar)",
+          "answer": "practicamos",
+          "type": "free_text"
+        },
+        {
+          "prompt": "vosotros (trabajar)",
+          "answer": "trabajáis",
+          "type": "free_text"
+        },
+        {
+          "prompt": "ellos (terminar)",
+          "answer": "terminan",
+          "type": "free_text"
+        },
+        {
+          "prompt": "Mis amigos (tomar)",
+          "answer": "toman",
+          "type": "free_text",
+          "options": [
+            "toman",
+            "tomamos",
+            "toma",
+            "toman"
+          ]
+        },
+        {
+          "prompt": "Yo (entrenar)",
+          "answer": "entreno",
+          "type": "free_text"
+        }
+      ],
+      "requires": "verb-presens"
+    },
+    {
+      "id": "ser-vs-estar",
+      "title": "Ser vs. Estar",
+      "questions": [
+        {
+          "prompt": "Yo ___ cansado.",
+          "answer": "estoy",
+          "type": "multiple_choice",
+          "options": [
+            "estoy",
+            "soy"
+          ]
+        },
+        {
+          "prompt": "Tú ___ de Suecia.",
+          "answer": "eres",
+          "type": "multiple_choice",
+          "options": [
+            "eres",
+            "estás"
+          ]
+        },
+        {
+          "prompt": "Ella ___ médica.",
+          "answer": "es",
+          "type": "multiple_choice",
+          "options": [
+            "es",
+            "está"
+          ]
+        },
+        {
+          "prompt": "Nosotros ___ en la escuela.",
+          "answer": "estamos",
+          "type": "multiple_choice",
+          "options": [
+            "estamos",
+            "somos"
+          ]
+        },
+        {
+          "prompt": "Juan ___ muy simpático.",
+          "answer": "es",
+          "type": "multiple_choice",
+          "options": [
+            "es",
+            "está"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser-vs-estar-freetext",
+      "title": "Ser vs. Estar (Fritext)",
+      "questions": [
+        {
+          "prompt": "Yo ___ cansado.",
+          "answer": "estoy",
+          "type": "free_text",
+          "options": [
+            "estoy",
+            "soy"
+          ]
+        },
+        {
+          "prompt": "Tú ___ de Suecia.",
+          "answer": "eres",
+          "type": "free_text",
+          "options": [
+            "eres",
+            "estás"
+          ]
+        },
+        {
+          "prompt": "Ella ___ médica.",
+          "answer": "es",
+          "type": "free_text",
+          "options": [
+            "es",
+            "está"
+          ]
+        },
+        {
+          "prompt": "Nosotros ___ en la escuela.",
+          "answer": "estamos",
+          "type": "free_text",
+          "options": [
+            "estamos",
+            "somos"
+          ]
+        },
+        {
+          "prompt": "Juan ___ muy simpático.",
+          "answer": "es",
+          "type": "free_text",
+          "options": [
+            "es",
+            "está"
+          ]
+        }
+      ],
+      "requires": "ser-vs-estar"
+    },
+    {
+      "id": "maende-adjektiv",
+      "title": "Mående & Adjektiv",
+      "questions": [
+        {
+          "prompt": "Förkyld",
+          "answer": "resfriado",
+          "type": "multiple_choice",
+          "options": [
+            "resfriado",
+            "cansado",
+            "enamorado"
+          ]
+        },
+        {
+          "prompt": "Kär",
+          "answer": "enamorado",
+          "type": "multiple_choice",
+          "options": [
+            "enamorado",
+            "solo",
+            "cansado"
+          ]
+        },
+        {
+          "prompt": "Trött",
+          "answer": "cansado",
+          "type": "multiple_choice",
+          "options": [
+            "cansado",
+            "resfriado",
+            "enamorado"
+          ]
+        },
+        {
+          "prompt": "Ensam",
+          "answer": "solo",
+          "type": "multiple_choice"
+        }
+      ]
+    },
+    {
+      "id": "maende-adjektiv-freetext",
+      "title": "Mående & Adjektiv (Fritext)",
+      "questions": [
+        {
+          "prompt": "Förkyld",
+          "answer": "resfriado",
+          "type": "free_text",
+          "options": [
+            "resfriado",
+            "cansado",
+            "enamorado"
+          ]
+        },
+        {
+          "prompt": "Kär",
+          "answer": "enamorado",
+          "type": "free_text",
+          "options": [
+            "enamorado",
+            "solo",
+            "cansado"
+          ]
+        },
+        {
+          "prompt": "Trött",
+          "answer": "cansado",
+          "type": "free_text",
+          "options": [
+            "cansado",
+            "resfriado",
+            "enamorado"
+          ]
+        },
+        {
+          "prompt": "Ensam",
+          "answer": "solo",
+          "type": "free_text"
+        }
+      ],
+      "requires": "maende-adjektiv"
+    },
+    {
+      "id": "futurum",
+      "title": "Futurum",
+      "questions": [
+        {
+          "prompt": "Jag ska plugga",
+          "answer": "voy a estudiar",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "Vi ska äta",
+          "answer": "vamos a comer",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "Han ska sova",
+          "answer": "va a dormir",
+          "type": "multiple_choice",
+          "options": [
+            "va a dormir",
+            "vas a dormir",
+            "voy a dormir"
+          ]
+        },
+        {
+          "prompt": "Du ska prata",
+          "answer": "vas a hablar",
+          "type": "multiple_choice"
+        }
+      ]
+    },
+    {
+      "id": "futurum-freetext",
+      "title": "Futurum (Fritext)",
+      "questions": [
+        {
+          "prompt": "Jag ska plugga",
+          "answer": "voy a estudiar",
+          "type": "free_text"
+        },
+        {
+          "prompt": "Vi ska äta",
+          "answer": "vamos a comer",
+          "type": "free_text"
+        },
+        {
+          "prompt": "Han ska sova",
+          "answer": "va a dormir",
+          "type": "free_text",
+          "options": [
+            "va a dormir",
+            "vas a dormir",
+            "voy a dormir"
+          ]
+        },
+        {
+          "prompt": "Du ska prata",
+          "answer": "vas a hablar",
+          "type": "free_text"
+        }
+      ],
+      "requires": "futurum"
+    },
+    {
+      "id": "tidsord",
+      "title": "Tidsord",
+      "questions": [
+        {
+          "prompt": "Först",
+          "answer": "primero",
+          "type": "multiple_choice",
+          "options": [
+            "primero",
+            "luego",
+            "después"
+          ]
+        },
+        {
+          "prompt": "Sedan / Därefter",
+          "answer": "luego",
+          "type": "multiple_choice",
+          "options": [
+            "luego",
+            "antes",
+            "porque"
+          ]
+        },
+        {
+          "prompt": "Efteråt",
+          "answer": "después",
+          "type": "multiple_choice",
+          "options": [
+            "después",
+            "también",
+            "pero"
+          ]
+        },
+        {
+          "prompt": "Efter...",
+          "answer": "después de",
+          "type": "multiple_choice",
+          "options": [
+            "después de",
+            "antes de",
+            "luego de"
+          ]
+        },
+        {
+          "prompt": "Senare",
+          "answer": "más tarde",
+          "type": "multiple_choice"
+        },
+        {
+          "prompt": "Slutligen",
+          "answer": "finalmente",
+          "type": "multiple_choice",
+          "options": [
+            "finalmente",
+            "también",
+            "porque"
+          ]
+        },
+        {
+          "prompt": "Och",
+          "answer": "y",
+          "type": "multiple_choice",
+          "options": [
+            "y",
+            "pero",
+            "también"
+          ]
+        },
+        {
+          "prompt": "Men",
+          "answer": "pero",
+          "type": "multiple_choice",
+          "options": [
+            "pero",
+            "porque",
+            "y"
+          ]
+        },
+        {
+          "prompt": "Också / Även",
+          "answer": "también",
+          "type": "multiple_choice",
+          "options": [
+            "también",
+            "primero",
+            "luego"
+          ]
+        },
+        {
+          "prompt": "Eftersom / För att",
+          "answer": "porque",
+          "type": "multiple_choice",
+          "options": [
+            "porque",
+            "pero",
+            "y"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tidsord-freetext",
+      "title": "Tidsord (Fritext)",
+      "questions": [
+        {
+          "prompt": "Först",
+          "answer": "primero",
+          "type": "free_text",
+          "options": [
+            "primero",
+            "luego",
+            "después"
+          ]
+        },
+        {
+          "prompt": "Sedan / Därefter",
+          "answer": "luego",
+          "type": "free_text",
+          "options": [
+            "luego",
+            "antes",
+            "porque"
+          ]
+        },
+        {
+          "prompt": "Efteråt",
+          "answer": "después",
+          "type": "free_text",
+          "options": [
+            "después",
+            "también",
+            "pero"
+          ]
+        },
+        {
+          "prompt": "Efter...",
+          "answer": "después de",
+          "type": "free_text",
+          "options": [
+            "después de",
+            "antes de",
+            "luego de"
+          ]
+        },
+        {
+          "prompt": "Senare",
+          "answer": "más tarde",
+          "type": "free_text"
+        },
+        {
+          "prompt": "Slutligen",
+          "answer": "finalmente",
+          "type": "free_text",
+          "options": [
+            "finalmente",
+            "también",
+            "porque"
+          ]
+        },
+        {
+          "prompt": "Och",
+          "answer": "y",
+          "type": "free_text",
+          "options": [
+            "y",
+            "pero",
+            "también"
+          ]
+        },
+        {
+          "prompt": "Men",
+          "answer": "pero",
+          "type": "free_text",
+          "options": [
+            "pero",
+            "porque",
+            "y"
+          ]
+        },
+        {
+          "prompt": "Också / Även",
+          "answer": "también",
+          "type": "free_text",
+          "options": [
+            "también",
+            "primero",
+            "luego"
+          ]
+        },
+        {
+          "prompt": "Eftersom / För att",
+          "answer": "porque",
+          "type": "free_text",
+          "options": [
+            "porque",
+            "pero",
+            "y"
+          ]
+        }
+      ],
+      "requires": "tidsord"
+    },
+    {
+      "id": "extra-bien-bueno",
+      "title": "Extra: Bien/Buen/Bueno",
+      "questions": [
+        {
+          "prompt": "Bra (Adverb - hur man gör något)",
+          "answer": "bien",
+          "type": "multiple_choice",
+          "options": [
+            "bien",
+            "buen",
+            "bueno"
+          ]
+        },
+        {
+          "prompt": "En bra pojke",
+          "answer": "un buen chico",
+          "type": "multiple_choice",
+          "options": [
+            "un buen chico",
+            "un bueno chico",
+            "un bien chico"
+          ]
+        },
+        {
+          "prompt": "Bilen är bra",
+          "answer": "el coche es bueno",
+          "type": "multiple_choice",
+          "options": [
+            "el coche es bueno",
+            "el coche es buen",
+            "el coche es bien"
+          ]
+        },
+        {
+          "prompt": "Jag mår bra",
+          "answer": "estoy bien",
+          "type": "multiple_choice",
+          "options": [
+            "estoy bien",
+            "estoy bueno",
+            "estoy buen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extra-bien-bueno-freetext",
+      "title": "Extra: Bien/Buen/Bueno (Fritext)",
+      "questions": [
+        {
+          "prompt": "Bra (Adverb - hur man gör något)",
+          "answer": "bien",
+          "type": "free_text",
+          "options": [
+            "bien",
+            "buen",
+            "bueno"
+          ]
+        },
+        {
+          "prompt": "En bra pojke",
+          "answer": "un buen chico",
+          "type": "free_text",
+          "options": [
+            "un buen chico",
+            "un bueno chico",
+            "un bien chico"
+          ]
+        },
+        {
+          "prompt": "Bilen är bra",
+          "answer": "el coche es bueno",
+          "type": "free_text",
+          "options": [
+            "el coche es bueno",
+            "el coche es buen",
+            "el coche es bien"
+          ]
+        },
+        {
+          "prompt": "Jag mår bra",
+          "answer": "estoy bien",
+          "type": "free_text",
+          "options": [
+            "estoy bien",
+            "estoy bueno",
+            "estoy buen"
+          ]
+        }
+      ],
+      "requires": "extra-bien-bueno"
+    }
+  ]
+}
