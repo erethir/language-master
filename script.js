@@ -25,9 +25,9 @@ function playSound(type) {
   initAudio();
   if (!audioCtx) return;
 
-  if (document.documentElement.classList.contains('theme-mafia')) {
+  if (document.documentElement.classList.contains('theme-mafia') || document.documentElement.classList.contains('theme-mafia-pinstripe')) {
     if (type === 'correct') {
-      const bufferSize = audioCtx.sampleRate * 0.5;
+      const bufferSize = audioCtx.sampleRate * 2.0;
       const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
       const data = buffer.getChannelData(0);
       for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
@@ -35,11 +35,13 @@ function playSound(type) {
       noise.buffer = buffer;
       const filter = audioCtx.createBiquadFilter();
       filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(1000, audioCtx.currentTime);
-      filter.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.2);
+      filter.frequency.setValueAtTime(1500, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.15);
+      filter.frequency.linearRampToValueAtTime(20, audioCtx.currentTime + 1.5);
       const gain = audioCtx.createGain();
-      gain.gain.setValueAtTime(1, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+      gain.gain.setValueAtTime(2.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.3, audioCtx.currentTime + 0.1);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.5);
       noise.connect(filter); filter.connect(gain); gain.connect(audioCtx.destination);
       noise.start();
       return;
