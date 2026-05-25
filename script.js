@@ -39,10 +39,10 @@ function playSound(type) {
     osc.start();
     osc.stop(audioCtx.currentTime + 0.3);
   } else if (type === 'wrong') {
-    osc.type = 'sawtooth';
-    osc.frequency.setValueAtTime(150, audioCtx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.3);
-    gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(500, audioCtx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(380, audioCtx.currentTime + 0.15);
+    gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
     osc.start();
     osc.stop(audioCtx.currentTime + 0.3);
@@ -395,7 +395,6 @@ function handleAnswer(selected, correct, element, isFreeText = false) {
     updateMistakeDisplay();
 
     if (isFreeText) {
-      freeTextInput.value = '';
       freeTextInput.placeholder = correct;
     }
 
@@ -404,6 +403,7 @@ function handleAnswer(selected, correct, element, isFreeText = false) {
       element.classList.remove('wrong');
       if(isFreeText) {
           freeTextInput.focus();
+          freeTextInput.select();
       }
     }, 500);
   }

@@ -7,26 +7,38 @@
     {
       "threshold": 0,
       "icon": "📖",
-      "title": "Nybörjare",
+      "title": "Principiante",
       "translation": "Beginner"
     },
     {
-      "threshold": 6,
+      "threshold": 8,
       "icon": "🧠",
-      "title": "Tänkare",
+      "title": "Pensador",
       "translation": "Thinker"
     },
     {
-      "threshold": 12,
+      "threshold": 16,
+      "icon": "⚔️",
+      "title": "Luchador",
+      "translation": "Fighter"
+    },
+    {
+      "threshold": 24,
       "icon": "🔥",
-      "title": "I Elden",
+      "title": "En Llamas",
       "translation": "On Fire"
     },
     {
-      "threshold": 18,
+      "threshold": 32,
+      "icon": "⚡",
+      "title": "Experto",
+      "translation": "Expert"
+    },
+    {
+      "threshold": 40,
       "icon": "🎓",
-      "title": "Redo för provet",
-      "translation": "Ready for Exam"
+      "title": "Listo para el Examen",
+      "translation": "Ready for the Exam"
     }
   ],
   "topics": [
