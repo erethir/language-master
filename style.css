@@ -51,6 +51,23 @@ html.theme-neon {
   --text-dim: #a1a1aa;
 }
 
+html.theme-mafia {
+  --bg-gradient: url('mafia-bg.png') center/cover;
+  --card-bg: rgba(20, 15, 10, 0.9);
+  --card-border: #8b0000;
+  --primary: #d4af37;
+  --secondary: #8b0000;
+  --accent: #ff4444;
+  --star: #d4af37;
+  --star-dim: #4a3b2c;
+  --text: #f5deb3;
+  --text-dim: #cda434;
+}
+
+html.theme-mafia body {
+  font-family: 'Georgia', 'Courier New', serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
